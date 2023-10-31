@@ -5,13 +5,7 @@
     */
     // Create Dino Constructor
  function DinoConstructor(dinoData) {
-    this.species = dinoData.species;
-    this.diet = dinoData.diet;
-    this.weight = dinoData.weight;
-    this.height = dinoData.height;
-    this.fact = dinoData.fact;
-    this.where = dinoData.where;
-    this.when = dinoData.when;
+ 
 }
     /**
     * @description Creates the dinosaur object array by calling constructor
@@ -31,10 +25,7 @@
     */
     // Create Human Constructor
     function Human(name, weight, height, diet) {        
-        this.name = name;
-        this.weight = weight;
-        this.height = height;
-        this.diet = diet;
+       
     }
     // Use IIFE to get human data from form
     function getInputValue(elementId) {
@@ -42,50 +33,26 @@
     }
 
     function createHuman() {
-        return (function () {
-            let name = getInputValue("name");
-            let height = parseFloat(getInputValue("inches"));
-            let weight = parseFloat(getInputValue("weight"));
-            let diet = getInputValue("diet");
-            return new Human(name, weight, height,diet);
-        })();
+    
     }
 
     // Create Dino Compare Method 1
     DinoConstructor.prototype.compareHeight = function(height) {
-        let message = "Haha! We have same height =)"
-        if(this.height > height) {
-            message = "I am taller than you bro :>"
-        }
-        else if(this.height < height){
-            message = "You are taller than me :<"
-        }
-        this.fact = message
+   
     }
     // NOTE: Weight in JSON file is in lbs, height in inches. 
 
     
     // Create Dino Compare Method 2
     DinoConstructor.prototype.compareWeight = function(height) {
-        let message = "Haha! We have same weight =)"
-        if(this.height > height) {
-            message = "I am heavier than you bro :>"
-        }
-        else if(this.height < height){
-            message = "You are heavier than me :<"
-        }
-        this.fact = message
+  
     }
     // NOTE: Weight in JSON file is in lbs, height in inches.
 
     
     // Create Dino Compare Method 3
     DinoConstructor.prototype.compareDiet = function(diet) {
-        let message = "Haha! We have same diet, we can share our food"
-        if(this.diet !== diet) {
-            message = "Oh no! We have differrent diet"
-        }
-        this.fact = message
+       
     }
     // NOTE: Weight in JSON file is in lbs, height in inches.
 
